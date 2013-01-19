@@ -1,5 +1,7 @@
 " Make Vim more useful
 set nocompatible
+" Autoload plugins
+call pathogen#infect()
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -94,3 +96,5 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+" Open NERDTree automatically.
+autocmd vimenter * NERDTree
