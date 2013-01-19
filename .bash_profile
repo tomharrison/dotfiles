@@ -60,3 +60,6 @@ function mamp_path {
 
 mamp_path
 unset mamp_path
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
