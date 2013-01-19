@@ -40,8 +40,12 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
+" Tabs are four columns wide. Each indentation level is one tab.
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+filetype plugin indent on
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
