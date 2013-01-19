@@ -35,7 +35,7 @@ function rvm_ruby_ver {
 	local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
 	[ "$version" == "1.8.7" ] && version=""
 	local full="ruby-$version$gemset"
-	[ "$full" != "" ] && echo " $full"
+	[ "$full" != "" ] && echo "$full"
 }
 
 export PS1="$IGREEN[ $IBLUE\u@\h:\W $CYAN\$(rvm_ruby_ver)\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$IGREEN ]\n>: $RESET"
