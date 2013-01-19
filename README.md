@@ -1,4 +1,4 @@
-# Mathias’s dotfiles
+# Tom's Fork of Mathias’s dotfiles
 
 ## Installation
 
