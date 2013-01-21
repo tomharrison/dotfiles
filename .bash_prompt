@@ -38,5 +38,5 @@ function rvm_ruby_ver {
 	[ "$full" != "" ] && echo "$full"
 }
 
-export PS1="$IGREEN[ $IBLUE\u@\h:\W $CYAN\$(rvm_ruby_ver)\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$IGREEN ]\n>: $RESET"
+export PS1="$IGREEN[ $IBLUE\u@\h:\W $IRED\$(rvm_ruby_ver)$CYAN\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$IGREEN ]\n>: $RESET"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
