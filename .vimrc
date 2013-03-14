@@ -99,6 +99,8 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
+	autocmd BufNewFile,BufRead *.scss set filetype=scss
 endif
 " Open NERDTree automatically.
 autocmd vimenter * NERDTree
