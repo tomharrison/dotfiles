@@ -101,6 +101,7 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 	autocmd BufNewFile,BufRead *.scss set filetype=scss
+	autocmd BufNewFile,BufRead *.pp set filetype=puppet
 endif
 " Open NERDTree automatically.
 autocmd vimenter * NERDTree
