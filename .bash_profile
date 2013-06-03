@@ -61,5 +61,13 @@ function mamp_path {
 mamp_path
 unset mamp_path
 
+function npm_path {
+	PATH="/usr/local/share/npm/bin:$PATH"
+}
+
+npm_path
+unset npm_path
+export NODE_PATH="/usr/local/bin/node"
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
