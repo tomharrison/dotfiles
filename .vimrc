@@ -98,5 +98,3 @@ if has("autocmd")
 	" Enable file type detection
 	filetype on
 endif
-" Open NERDTree automatically.
-autocmd vimenter * NERDTree
