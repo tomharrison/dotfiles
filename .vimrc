@@ -36,8 +36,6 @@ set exrc
 set secure
 " Enable line numbers
 set number
-" Enable syntax highlighting
-syntax on
 " Highlight current line
 set cursorline
 " Tabs are four columns wide. Each indentation level is one tab.
@@ -98,3 +96,7 @@ if has("autocmd")
 	" Enable file type detection
 	filetype on
 endif
+
+syntax enable
+set background=dark
+colorscheme solarized
