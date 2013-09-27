@@ -99,4 +99,6 @@ endif
 
 syntax enable
 set background=dark
+let g:solarized_visibility="low"
+"let g:solarized_contrast="high"
 colorscheme solarized
