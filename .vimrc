@@ -102,3 +102,5 @@ set background=dark
 let g:solarized_visibility="low"
 "let g:solarized_contrast="high"
 colorscheme solarized
+
+let g:airline_powerline_fonts=1
