@@ -58,8 +58,8 @@ function mamp_path {
 	fi
 }
 
-mamp_path
-unset mamp_path
+#mamp_path
+#unset mamp_path
 
 function npm_path {
 	PATH="/usr/local/share/npm/bin:$PATH"
