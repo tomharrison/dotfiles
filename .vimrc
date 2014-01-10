@@ -101,5 +101,3 @@ syntax enable
 "let g:solarized_visibility="low"
 "let g:solarized_contrast="high"
 colorscheme molokai
-
-let g:airline_powerline_fonts=1
