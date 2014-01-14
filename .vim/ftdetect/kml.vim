@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.kml setfiletype kml syntax=html
+autocmd BufNewFile,BufRead *.kml set filetype=kml syntax=html
