@@ -101,3 +101,6 @@ syntax enable
 "let g:solarized_visibility="low"
 "let g:solarized_contrast="high"
 colorscheme molokai
+
+" Don't underline/bold/italicize HTML tag contents.
+let html_no_rendering=1
