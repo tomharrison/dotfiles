@@ -71,3 +71,7 @@ export NODE_PATH="/usr/local/bin/node"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# golang
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin
