@@ -46,7 +46,7 @@ hi Error           guifg=#960050 guibg=#1E0010
 hi Keyword         guifg=#F92672               gui=bold
 hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
-hi SpecialKey      guifg=#66D9EF               gui=italic
+hi SpecialKey      guifg=#6B6B6B               gui=italic
 
 " }}}
 " Diffs {{{
@@ -214,8 +214,8 @@ if &t_Co > 255
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
-   hi Special         ctermfg=81  ctermbg=232
-   hi SpecialKey      ctermfg=245
+   hi Special         ctermfg=81
+   hi SpecialKey      ctermfg=240
 
    hi Statement       ctermfg=161               cterm=bold
    hi StatusLine      ctermfg=130 ctermbg=15
