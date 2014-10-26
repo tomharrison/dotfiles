@@ -10,3 +10,9 @@
 [submodule ".vim/bundle/vim-ps1"]
 	path = .vim/bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule ".vim/bundle/rubocop"]
+	path = .vim/bundle/rubocop
+	url = https://github.com/ngmy/vim-rubocop.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
