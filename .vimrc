@@ -104,3 +104,6 @@ colorscheme molokai
 
 " Don't underline/bold/italicize HTML tag contents.
 let html_no_rendering=1
+
+" Use Rubocopy for Syntastic Ruby validation
+let g:syntastic_ruby_checkers = ['rubocop']
