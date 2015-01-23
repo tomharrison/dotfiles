@@ -75,3 +75,6 @@ export NODE_PATH="/usr/local/bin/node"
 # golang
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
+
+source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
