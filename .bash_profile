@@ -67,7 +67,7 @@ function npm_path {
 
 npm_path
 unset npm_path
-export NODE_PATH="/usr/local/bin/node"
+export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
