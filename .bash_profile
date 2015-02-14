@@ -38,29 +38,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
-# Add Bitnami MAMP Stack directories to PATH.
-function mamp_path {
-	# Check the user Apps dir, then the global dir for a folder named like "mampstack-version".
-	# Use the first one found.
-	local mamp=$(ls -d -l ~/Applications/** | grep '\/mampstack-.*$' | awk '1; NR == 1 { exit }')
-	[ "$mamp" == "" ] && mamp=$(ls -d -l /Applications/** | grep '\/mampstack-.*$' | awk '1; NR == 1 { exit }')
-	if [ "$mamp" != "" ]; then
-		local fw="$mamp/frameworks"
-		[ -d "$mamp/common/bin" ] && PATH="$mamp/common/bin:$PATH"
-		[ -d "$mamp/apache2/bin" ] && PATH="$mamp/apache2/bin:$PATH"
-		[ -d "$mamp/mysql/bin" ] && PATH="$mamp/mysql/bin:$PATH"
-		[ -d "$mamp/php/bin" ] && PATH="$mamp/php/bin:$PATH"
-		[ -d "$mamp/sqlite/bin" ] && PATH="$mamp/sqlite/bin:$PATH"
-		[ -d "$fw/zendframework/bin" ] && PATH="$fw/zendframework/bin:$PATH"
-		[ -d "$fw/symfony/bin" ] && PATH="$fw/symfony/bin:$PATH"
-		[ -d "$fw/codeigniter/bin" ] && PATH="$fw/codeigniter/bin:$PATH"
-		[ -d "$fw/cakephp/app/Console" ] && PATH="$fw/cakephp/app/Console:$PATH"
-	fi
-}
-
-#mamp_path
-#unset mamp_path
-
 function npm_path {
 	PATH="/usr/local/share/npm/bin:$PATH"
 }
@@ -74,9 +51,10 @@ export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 
 # golang
 export GOPATH=$HOME/Projects/go
-export PATH=$PATH:$GOPATH/bin
+[[ -d "$GOPATH/bin" ]] && export PATH=$PATH:$GOPATH/bin
 
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 
+# ASP.Net vNext
 source kvm.sh
