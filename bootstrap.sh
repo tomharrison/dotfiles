@@ -1,6 +1,7 @@
 #!/bin/bash
 cd "$(dirname "${BASH_SOURCE}")"
 git pull
+npm install -g eslint babel-eslint eslint-plugin-react
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
 }

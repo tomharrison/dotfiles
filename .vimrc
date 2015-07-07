@@ -107,3 +107,4 @@ let html_no_rendering=1
 
 " Use Rubocopy for Syntastic Ruby validation
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
