@@ -55,6 +55,3 @@ export GOPATH=$HOME/Projects/go
 
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
-
-# ASP.Net vNext
-source kvm.sh
