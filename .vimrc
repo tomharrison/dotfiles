@@ -98,11 +98,15 @@ if has("autocmd")
 endif
 
 syntax enable
-"let g:solarized_visibility="low"
-"let g:solarized_contrast="high"
-colorscheme molokai
-"let g:rehash256 = 1
-"let g:molokai_original = 1
+
+" Use vimbrant
+set background=dark
+colorscheme vimbrant
+highlight ColorColumn ctermbg=7
+highlight ColorColumn guibg=Gray
+highlight VertSplit ctermfg=237 ctermbg=none
+highlight NonText ctermfg=237
+highlight SpecialKey ctermfg=237
 
 " Don't underline/bold/italicize HTML tag contents.
 let html_no_rendering=1
