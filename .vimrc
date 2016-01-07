@@ -117,6 +117,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Use neocomplete
 let g:neocomplete#enable_at_startup = 1
+" Supress scratch windows
+set completeopt-=preview
 
 " Open NERDTree if no files were specified at startup.
 autocmd StdinReadPre * let s:std_in=1
