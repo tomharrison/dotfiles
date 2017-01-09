@@ -55,3 +55,7 @@ export GOPATH=$HOME/Projects/go
 
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
+
+if [ -f ~/.git-completion.bash ]; then
+	. ~/.git-completion.bash
+fi
