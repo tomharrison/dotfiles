@@ -38,5 +38,13 @@ function rvm_ruby_ver {
 	[ "$full" != "ruby-" ] && echo " $full"
 }
 
-export PS1="$GREEN[ $MAGENTA\u@\h:\W$BLUE\$(rvm_ruby_ver)\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$GREEN ]\n$GREEN>: $RESET"
+# Get the current Node.js version
+function nvm_nodejs_ver {
+	if type nvm >/dev/null 2>&1; then
+		local version=$(nvm current)
+		echo " node-${version}"
+	fi
+}
+
+export PS1="$GREEN[ $MAGENTA\u@\h:\W$BLUE\$(rvm_ruby_ver)\$(nvm_nodejs_ver)$YELLOW\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$GREEN ]\n$GREEN>: $RESET"
 export PS2="\[$ORANGE\]→ \[$RESET\]"

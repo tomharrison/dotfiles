@@ -9,6 +9,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+export CLICOLOR=1
+export TERM=xterm-256color
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
