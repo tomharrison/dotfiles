@@ -22,6 +22,7 @@ set fillchars+=vert:│
 set fillchars+=fold:-
 set list
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -34,6 +35,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
