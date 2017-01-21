@@ -23,6 +23,7 @@ set fillchars+=fold:-
 set list
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set background=dark
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -34,8 +35,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mhartington/oceanic-next'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
@@ -45,4 +46,4 @@ endif
 
 filetype plugin indent on
 syntax enable
-colorscheme base16-default-dark
+colorscheme one
