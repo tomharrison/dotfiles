@@ -38,6 +38,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
 Plug 'chriskempson/base16-vim'
+Plug 'rakr/vim-two-firewatch'
+Plug 'atelierbram/Base2Tone-vim'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
@@ -47,6 +50,6 @@ endif
 
 filetype plugin indent on
 syntax enable
-set background=light
-colorscheme base16-github
+set background=dark
+colorscheme one
 let g:jsx_ext_required = 0
