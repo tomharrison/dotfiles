@@ -37,7 +37,7 @@ Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isRuslan/vim-es6'
 Plug 'mxw/vim-jsx'
-Plug 'tomharrison/vim-gotham'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -47,6 +47,6 @@ endif
 
 filetype plugin indent on
 syntax enable
-set background=dark
-colorscheme gotham
+set background=light
+colorscheme base16-github
 let g:jsx_ext_required = 0
