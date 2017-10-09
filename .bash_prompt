@@ -46,5 +46,5 @@ function nvm_nodejs_ver {
 	fi
 }
 
-export PS1="$GREEN[ $MAGENTA\u@\h:\W$BLUE\$(rvm_ruby_ver)\$(nvm_nodejs_ver)$YELLOW\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$GREEN ]\n$GREEN>: $RESET"
+export PS1="$GREEN[ $CYAN\u@\h:\W\$(rvm_ruby_ver)\$(nvm_nodejs_ver)$YELLOW\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" \")\$(parse_git_branch)$CYAN ]\n$CYAN>: $RESET"
 export PS2="\[$ORANGE\]→ \[$RESET\]"

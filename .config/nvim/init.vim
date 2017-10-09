@@ -32,11 +32,12 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   \ | Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
   \ | Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
   \ | Plug 'jistr/vim-nerdtree-tabs'
-Plug 'mhartington/oceanic-next'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rakr/vim-one'
+Plug 'isRuslan/vim-es6'
+Plug 'mxw/vim-jsx'
+Plug 'tomharrison/vim-gotham'
 
 call plug#end()
 
@@ -46,4 +47,6 @@ endif
 
 filetype plugin indent on
 syntax enable
-colorscheme one
+set background=dark
+colorscheme gotham
+let g:jsx_ext_required = 0
