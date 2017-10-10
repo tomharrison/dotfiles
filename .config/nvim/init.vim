@@ -35,12 +35,32 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'isRuslan/vim-es6'
+
+" Javascript
 Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+"
+" Color systems
 Plug 'chriskempson/base16-vim'
-Plug 'rakr/vim-two-firewatch'
 Plug 'atelierbram/Base2Tone-vim'
+
+" Color schemes
 Plug 'rakr/vim-one'
+Plug 'vim-scripts/chlordane.vim'
+Plug 'rakr/vim-two-firewatch'
+Plug 'junegunn/seoul256.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'w0ng/vim-hybrid'
+" phosphor
+Plug 'elmindreda/vimcolors'
+Plug 'vim-scripts/greenvision'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tomharrison/vim-gotham'
+Plug 'altercation/vim-colors-solarized'
+
+" No words...
+Plug 'KeyboardFire/hotdog.vim'
 
 call plug#end()
 
@@ -51,5 +71,5 @@ endif
 filetype plugin indent on
 syntax enable
 set background=dark
-colorscheme one
+colorscheme base16-green-screen
 let g:jsx_ext_required = 0
