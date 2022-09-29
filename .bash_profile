@@ -62,3 +62,8 @@ export NVM_DIR=~/.nvm
 if [ -f ~/.git-completion.bash ]; then
 	. ~/.git-completion.bash
 fi
+
+export HOMEBREW_FORCE_BREWED_CURL=1
+
+# Add Homebrew to PATH for Apple Silicon
+eval "$(/opt/homebrew/bin/brew shellenv)"
