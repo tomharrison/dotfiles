@@ -67,3 +67,6 @@ export HOMEBREW_FORCE_BREWED_CURL=1
 
 # Add Homebrew to PATH for Apple Silicon
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Silence MaxOS's "The default interactive shell is now zsh" message
+export BASH_SILENCE_DEPRECATION_WARNING=1
