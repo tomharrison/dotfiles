@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -28,5 +29,11 @@ return require('packer').startup(function(use)
       "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
+  }
+
+  -- TSUpdate will throw an error on the first run. Just run :PackerSync again.
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ':TSUpdate'
   }
 end)

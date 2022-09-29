@@ -1,6 +1,10 @@
 brew "node"
 brew "tree"
 
+# Telescope (Neovim) external dependencies
+brew "fd"
+brew "ripgrep"
+
 # Install all patched Nerd Fonts for Neovim
 tap "homebrew/cask-fonts"
 cask "font-3270-nerd-font"
