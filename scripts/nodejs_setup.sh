@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Using node.js:"
+echo "\nUsing node.js:"
 which node
 node -v
 
