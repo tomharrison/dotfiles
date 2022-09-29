@@ -1,75 +1,59 @@
-let g:mapleader=','
+lua require('plugins')
+lua require('my_lualine')
 
+set nocompatible
+set clipboard=unnamed
+set wildmenu
 set backspace=indent,eol,start
+set ttyfast
+set gdefault hlsearch ignorecase incsearch
 set encoding=utf-8 nobomb
+let mapleader=","
+set noeol
+set binary
 set modeline modelines=4
-set exrc secure
+set exrc
+set secure
 set number relativenumber numberwidth=3
 set cursorline
-set novisualbell errorbells
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-set hlsearch ignorecase incsearch
 set mouse=a
-set nostartofline
-set ruler
-set shortmess=atI
 set showmode
 set title
+set nostartofline ruler
 set showcmd
 set scrolloff=3
-set fillchars+=diff:⣿
-set fillchars+=vert:│
-set fillchars+=fold:-
-set list
+
+" Tabs are four columns wide. Each indentation level is one tab.
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+
+" Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set list
+" Always show status line
+set laststatus=2
+" Disable error bells
+set noerrorbells
+" Don’t show the intro message when starting Vim
+set shortmess=atI
+
 set background=dark
-
-call plug#begin('~/.local/share/nvim/plugged')
-
-Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  \ | Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
-  \ | Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-  \ | Plug 'jistr/vim-nerdtree-tabs'
-Plug 'neomake/neomake'
-Plug 'benjie/neomake-local-eslint.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-
-" Javascript
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'isRuslan/vim-es6'
-"
-" Color systems
-Plug 'chriskempson/base16-vim'
-Plug 'atelierbram/Base2Tone-vim'
-
-" Color schemes
-Plug 'rakr/vim-one'
-Plug 'vim-scripts/chlordane.vim'
-Plug 'rakr/vim-two-firewatch'
-Plug 'junegunn/seoul256.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'w0ng/vim-hybrid'
-" phosphor
-Plug 'elmindreda/vimcolors'
-Plug 'vim-scripts/greenvision'
-Plug 'nanotech/jellybeans.vim'
-Plug 'tomharrison/vim-gotham'
-Plug 'altercation/vim-colors-solarized'
-
-" No words...
-Plug 'KeyboardFire/hotdog.vim'
-
-call plug#end()
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
+colorscheme tokyonight-moon
 filetype plugin indent on
 syntax enable
-set background=dark
-colorscheme base16-green-screen
-let g:jsx_ext_required = 0
+" Don't underline/bold/italicize HTML tag contents.
+let html_no_rendering=1
+
+" Golang settings
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" automatically run :PackerCompile whenever plugins.lua is updated
+augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+augroup end
