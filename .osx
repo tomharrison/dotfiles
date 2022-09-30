@@ -47,6 +47,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 
 # Speed up animations... particularly changing Spaces
 defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
