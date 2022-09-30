@@ -45,6 +45,9 @@ defaults write com.apple.helpviewer DevMode -bool true
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Speed up animations... particularly changing Spaces
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -176,7 +179,8 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+# This is erroring with "disablelocal: Unrecognized verb."
+#hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
