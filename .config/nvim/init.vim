@@ -68,6 +68,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Also map ctrl-p to Telescape
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+
 " Jump back and forward one page. Keep cursor centered vertically.
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
