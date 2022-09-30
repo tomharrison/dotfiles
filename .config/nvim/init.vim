@@ -1,7 +1,8 @@
+set nocompatible
+
 lua require('plugins')
 lua require('my_lualine')
 
-set nocompatible
 set clipboard=unnamed
 set wildmenu
 set backspace=indent,eol,start
@@ -23,8 +24,15 @@ set nostartofline ruler
 set showcmd
 set scrolloff=3
 
-" Tabs are four columns wide. Each indentation level is one tab.
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+" Force true colour on, since vim can’t detect it within tmux
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+
+set termguicolors
+
+" Enable italics
+set t_ZH=^[[3m
+set t_ZR=^[[23m
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -63,3 +71,17 @@ augroup packer_user_config
   autocmd!
   autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup end
+
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype make setlocal tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+autocmd Filetype typescript setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2
+autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+autocmd Filetype python setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+autocmd Filetype c setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+autocmd Filetype ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd Filetype eruby setlocal expandtab shiftwidth=2 tabstop=2
+

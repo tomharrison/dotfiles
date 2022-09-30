@@ -10,7 +10,7 @@ done
 unset file
 
 export CLICOLOR=1
-export TERM=xterm-256color
+export TERM=xterm-256color-italic
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
