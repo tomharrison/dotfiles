@@ -74,3 +74,20 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
+## Configure/fix italics in iTerm2 + tmux
+
+Install italics support:
+
+```bash
+./scripts/term_setup.sh
+```
+
+Navigate to iTerm 2 > Preferences > Default Profile > Terminal.
+Set "Report Terminal Type" to `xterm-256color-italic`.
+Reload all configurations and make sure `$TERM` is `xterm-256color-italic`:
+
+```bash
+source ~/.bash_profile
+killall tmux
+echo $TERM
+```
