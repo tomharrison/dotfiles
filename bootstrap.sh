@@ -10,14 +10,18 @@ function installDotfiles() {
 }
 
 function setupHomebrew() {
-	read -p "\nDo you want to update and upgrade Homebrew packages? " -n 1
+	echo
+	read -p "Do you want to update and upgrade Homebrew packages? " -n 1
+	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		~/scripts/homebrew_setup.sh
 	fi
 }
 
 function setupNodeJS() {
-	read -p "\nDo you want to run the global Node.js setup? " -n 1
+	echo
+	read -p "Do you want to run the global Node.js setup? " -n 1
+	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		~/scripts/nodejs_setup.sh
 	fi
