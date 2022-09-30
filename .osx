@@ -88,6 +88,16 @@ systemsetup -settimezone "America/New_York" > /dev/null
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 ###############################################################################
+# Terminal & iTerm2                                                           #
+###############################################################################
+
+# Install the Solarized Dark theme for iTerm
+open "${HOME}/init/tokyo-night.itermcolors"
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+###############################################################################
 # Screen                                                                      #
 ###############################################################################
 
