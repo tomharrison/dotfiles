@@ -1,5 +1,6 @@
 brew "node"
 brew "tree"
+brew "jq"
 
 # Telescope (Neovim) external dependencies
 brew "fd"

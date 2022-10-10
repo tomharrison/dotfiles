@@ -96,3 +96,6 @@ autocmd Filetype c setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 autocmd Filetype ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd Filetype eruby setlocal expandtab shiftwidth=2 tabstop=2
 
+" Prettify/de-prettify JSON
+command Format :%!jq .
+command Unformat :%!jq -c .
