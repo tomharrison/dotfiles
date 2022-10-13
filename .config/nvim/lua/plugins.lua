@@ -36,4 +36,7 @@ return require('packer').startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ':TSUpdate'
   }
+
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
 end)
