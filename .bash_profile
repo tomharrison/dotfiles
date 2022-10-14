@@ -56,6 +56,9 @@ export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 export GOPATH=$HOME/Projects/go
 [[ -d "$GOPATH/bin" ]] && export PATH=$PATH:$GOPATH/bin
 
+# postgres
+[[ -d "/usr/local/opt/libpq/bin" ]] && export PATH=$PATH:/usr/local/opt/libpq/bin
+
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 
